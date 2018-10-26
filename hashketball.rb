@@ -103,8 +103,8 @@ def big_shoe_rebounds
   game_hash.each do |location, team_data|
     team_data[:players].collect do |attribute, data|
         #binding.pry
-        data.max_by{|x| x[:shoe]}
-          return attribute
+        data.max_by{|x| x}
+          return data[:rebounds]
     end
     end
   end
